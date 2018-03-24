@@ -79,7 +79,7 @@ public class CameraFragment extends Fragment implements SurfaceHolder.Callback {
         pictureCallback = new Camera.PictureCallback() {
             @Override
             public void onPictureTaken(byte[] data, Camera camera) {
-                Intent intent = new Intent(getActivity().getApplicationContext(), CapturedPhotoActivity.class);
+                Intent intent = new Intent(getActivity(), CapturedPhotoActivity.class);
                 intent.putExtra("photo", data);
                 startActivity(intent);
             }
